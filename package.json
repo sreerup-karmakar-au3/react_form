@@ -1,0 +1,25 @@
+{
+  "name": "react_form",
+  "version": "1.0.0",
+  "description": "Assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreerup-karmakar-au3/react_form.git"
+  },
+  "author": "Sreerup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sreerup-karmakar-au3/react_form/issues"
+  },
+  "homepage": "https://github.com/sreerup-karmakar-au3/react_form#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
