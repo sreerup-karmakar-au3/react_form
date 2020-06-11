@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Alert, AlertTitle } from '@material-ui/lab'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
+import { TextField, Button, Box, Typography } from '@material-ui/core'
 import SaveIcon from '@material-ui/icons/Save'
 
 const axios = require('axios')
@@ -40,6 +39,11 @@ function AddUserDetails() {
 
     return (
         <>
+            <Box display="flex" justifyContent="center" m={1}>
+                <Typography variant="h3">
+                    Add User
+                </Typography>
+            </Box>
             {
                 (errors && messages.length>0) ? (
                     <Alert severity="error">
@@ -63,7 +67,9 @@ function AddUserDetails() {
                 <TextField id="standard-full-width" fullWidth style={{ margin: 8 }} label="Lastname" onChange={(e) => setDetails({...details, lastname: e.target.value})}/>
                 <TextField id="standard-full-width" fullWidth style={{ margin: 8 }} label="Email ID" onChange={(e) => setDetails({...details, email: e.target.value})}/>
                 <TextField id="standard-full-width" fullWidth style={{ margin: 8 }} label="Phone number" onChange={(e) => setDetails({...details, phone: e.target.value})}/>
-                <Button variant="contained" type="submit" color="primary" size="small" startIcon={<SaveIcon/>}>Save</Button>
+                <Box display="flex" justifyContent="center" m={1}>
+                    <Button variant="contained" type="submit" color="primary" size="small" startIcon={<SaveIcon/>}>Save</Button>
+                </Box>
             </form>
         </>
     )

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { Card, CardMedia, CardContent } from '@material-ui/core'
+import { Card, CardMedia, CardContent, Box } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
 
 const axios = require('axios')
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles({
+    root: {
+        margin: 25
+    },
     media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
+        height: 300
     }
-}));
+});
 
 function ShowUser() {
     const classes = useStyles();
@@ -29,12 +30,14 @@ function ShowUser() {
             {
                 (users.length > 0) ? (
                     users.map((user, indx) => (
-                        <Card key={indx}>
+                        <Card key={indx} className={classes.root}>
                             <CardMedia className={classes.media} image={user.image}/>
                             <CardContent>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    {user.firstname} {user.lastname}
-                                </Typography>
+                                <Box display="flex" justifyContent="space-evenly">
+                                    <span>Name: {user.firstname} {user.lastname}</span>
+                                    <span>Email: {user.email}</span>
+                                    <span>Phone: {user.phone}</span>
+                                </Box>
                             </CardContent>
                         </Card>
                     ))
