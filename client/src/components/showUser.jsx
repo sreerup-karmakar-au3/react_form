@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 
 const axios = require('axios')
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     media: {
       height: 0,
       paddingTop: '56.25%', // 16:9
