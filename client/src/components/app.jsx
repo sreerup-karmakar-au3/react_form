@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import Container from '@material-ui/core/Container'
+
+import AddUserDetails from './addUserDetails'
+import ShowUser from './showUser'
 
 function App() {
-    const [message, setMessage] = useState("");
-    useEffect(() => {
-        fetch('/api/test')
-        .then(res => res.json())
-        .then(msg => setMessage(msg.success))
-    }, [message]);
     return (
-        <div>
-            {
-                message
-            }
-        </div>
+        <Container maxWidth="sm">
+            <AddUserDetails/>
+            <ShowUser/>
+        </Container>
     )
 }
 
