@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/sreerup-karmakar-au3/react_form#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-validator": "^6.5.0",
     "mongoose": "^5.9.18",
     "path": "^0.12.7"
